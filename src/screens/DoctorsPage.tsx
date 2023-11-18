@@ -15,6 +15,7 @@ export interface DoctorType {
   availability: boolean;
 }
 import DotLoader from "react-spinners/DotLoader";
+
 const DoctorsPage = () => {
   const [doctors, setDoctors] = useState<DoctorType[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
