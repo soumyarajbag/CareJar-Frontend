@@ -1,12 +1,14 @@
-import { SpecialistType } from "../data/specialist"
+import { Link } from "react-router-dom";
+import { SpecialistType } from "../screens/CategoryPage"
 const Specialist = (props:SpecialistType) => {
     const { description, image , title} = props ;
+    const encodedRole = encodeURIComponent(title!);
   return (
-    <div className="flex flex-col p-4 rounded-xl items-start w-[320px] border border-black">
-        <img className=" h-[200px] object-cover" src={image} alt="doctor" />
-        <h1 className="text-2xl font-bold tracking-wide">{title}</h1>
-        <p className="text-lg">{description}</p>
-    </div>
+    <Link to={`/doctors/${encodedRole}`}><div className="flex flex-col py-4 rounded-xl items-start w-[350px]  hover:scale-[1.01] duration-500 transition cursor-pointer">
+        <img className=" h-[220px] rounded-md object-cover" src={image} alt="doctor" />
+        <h1 className="text-2xl font-bold text-slate-700 tracking-wide hover:text-opacity-80">{title}</h1>
+        <p className="text-md">{description}</p>
+    </div></Link>
   )
 }
 
