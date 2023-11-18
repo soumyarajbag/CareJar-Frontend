@@ -1,12 +1,16 @@
 import { DoctorType } from "../data/doctors"
-
+import { BiSolidLike } from "react-icons/bi";
+import { MdDone } from "react-icons/md";
 const Doctor = (props:DoctorType) => {
     
     const {name , image , role , experience , fees , rating , place , chamber , patients , availability} = props ;
   return (
     <div className="flex flex-row  gap-10 p-4 border-t border-b border-black w-fit rounded-xl">
-        <div className="flex items-start   ">
+        <div className="relative ">
             <img className="h-48 w-48 rounded-full" src={image} alt="doctor" />
+            <div className="absolute text-white rounded-full p-2 bg-violet-500 bottom-9 right-3">
+            <MdDone className="font-bold text-md" />
+            </div>
         </div>
         <div className="flex flex-col items-start gap-5">
             <div className="flex flex-col items-start gap-2">
@@ -17,7 +21,7 @@ const Doctor = (props:DoctorType) => {
             <h1 className="text-slate-600 text-lg font-semibold">₹{fees} Consultation fee at clinic</h1>
             </div>
             <div className="flex flex-row gap-5">
-                  <div className="bg-green-500 text-white font-semibold px-2">{rating}%</div>    
+                  <div className="bg-green-500 text-white font-semibold px-2 flex items-center gap-2 rounded-md"><BiSolidLike />{rating}%</div>    
                   <h1 className="text-slate-800 font-semibold underline">{patients} Patient Stories</h1>  
             </div>
             
