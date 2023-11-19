@@ -21,20 +21,16 @@ const DoctorsPage = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [blank, setBlank] = useState<boolean>(false);
   const { role } = useParams<string>();
-  console.log(role)
+  console.log(role);
   const encodedRole = encodeURIComponent(role!);
   const fetchDoctors = async () => {
-    
     try {
-  
       const { data } = await axios.get(
         `https://care-jar-server.vercel.app/api/doctors/${encodedRole}`
       );
       if (data.doctorsbyrole.length > 0) {
         setDoctors(data.doctorsbyrole);
         setBlank(false);
-
-        
       } else {
         console.log("No doctors found");
         setBlank(true);
@@ -43,24 +39,32 @@ const DoctorsPage = () => {
       console.log(err);
     }
   };
-   useEffect(() => {
-    setLoading(true)
-     fetchDoctors();
-     setTimeout(()=>{
-        setLoading(false)
-     },1500)
-   }, [role]);
-   
+  useEffect(() => {
+    setLoading(true);
+    fetchDoctors();
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, [role]);
+
   return (
     <>
       <div className="flex flex-col justify-center  items-center mt-[3%] mb-[5%] ">
         <div className="flex flex-col  gap-5">
-          { <h1 className={` font-bold px-3 xl:px-0  text-start text-slate-600 text-2xl xl:text-3xl`}>{role}s </h1>}
+          {
+            <h1
+              className={` font-bold px-3 xl:px-0  text-start text-slate-600 text-2xl xl:text-3xl`}
+            >
+              {role}s{" "}
+            </h1>
+          }
           {loading ? (
-           <div className="h-screen flex flex-col items-center justify-center">
-           <DotLoader color="#36d7b7" />
-           <h1 className="text-xl font-semibold text-blue-500">Loading...</h1>
-           </div>
+            <div className="h-screen flex flex-col items-center justify-center">
+              <DotLoader color="#36d7b7" />
+              <h1 className="text-xl font-semibold text-blue-500">
+                Loading...
+              </h1>
+            </div>
           ) : (
             <div className="flex flex-col flex-wrap items-center  justify-center gap-10">
               {doctors.map((doctor: DoctorType, index) => {
@@ -68,9 +72,13 @@ const DoctorsPage = () => {
               })}
             </div>
           )}
-          {blank ? <div className="h-screen flex items-center justify-center">
-            <h1 className="font-bold text-2xl tracking-widest">No {role}s found</h1>
-          </div> : null}
+          {blank ? (
+            <div className="h-screen flex items-center justify-center">
+              <h1 className="font-bold text-2xl tracking-widest">
+                No {role}s found
+              </h1>
+            </div>
+          ) : null}
         </div>
       </div>
     </>
