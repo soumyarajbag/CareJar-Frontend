@@ -25,6 +25,6 @@
 - Initialised Backend Server and Created Models of <b>Specialists(Categories)</b> and <b>Doctors</b> .
 - Created Total 4 Controllers for Each , For Doctors : <b>getDoctors(GET) , addDoctor(POST) , getDoctorsbyRole(GET) , updateDoctorsbyId(PUT) , deleteDoctorbyId(DELETE)</b>
 - For Specialists : <b>getSpecialists(GET) , addSpecialist(POST) , updateSpecialistsbyTitle(PUT) , deleteSpecialistsbyTitle(DELETE)</b>
-- For Doctors API : <a href="https://care-jar-server.vercel.app/api/doctors">Click Here</a>
-- For Specialists API : <a href="https://care-jar-server.vercel.app/api/specialists">Click Here</a>
+- For Doctors API : <a href="https://care-jar-server.vercel.app/api/doctors" taget="_blank">Click Here</a>
+- For Specialists API : <a href="https://care-jar-server.vercel.app/api/specialists" taget="_blank">Click Here</a>
 - Deployed The Backend Repository in Vercel and Fetch The Data using Axios Library in Frontend from Deployed API Link .
