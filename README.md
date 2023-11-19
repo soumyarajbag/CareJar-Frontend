@@ -1,13 +1,20 @@
-# React + TypeScript + Vite
+<h1 align='center'>CareJar Assignment</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3 align='center'>This is the client-side repository</h3>
 
-Currently, two official plugins are available:
+### Languages 🛠 
+[![Tools and Technologies Used : ](https://skillicons.dev/icons?i=react,nodejs,express,mongodb,tailwind,ts,js,postman,html,css)](https://skillicons.dev)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Backend Server Repository](https://github.com/soumyarajbag/CareJar-Server) with [Deployed Server on Vercel](https://care-jar-server.vercel.app/) 
 
-## Expanding the ESLint configuration
+
+## <h3 align='center'> Sample UI of our stockXplore Web-App </h3>
+<p align='center'>
+<img src="UI/First_Screen.jpg" alt="Screenshot of First_Screen" width="400">
+<img src="UI/Dentist_Screen.jpg" alt="Screenshot of Dentist_Screen" width="400">
+<img src="UI/Gynec_Screen.jpg" alt="Screenshot of Gynec_Screen" width="400">
+<img src="UI/Diet_Screen.jpg" alt="Screenshot of Diet_Screen.jpg" width="400">
+<p>
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
