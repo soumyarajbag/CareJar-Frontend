@@ -5,8 +5,8 @@
 ### Tech Stack  🛠 
 [![Tools and Technologies Used : ](https://skillicons.dev/icons?i=react,nodejs,express,mongodb,tailwind,ts,js,postman,html,css)](https://skillicons.dev)
 
+- [Frontend Server Repository](https://github.com/soumyarajbag/CareJar-Frontend) with [Deployed Server on Vercel](https://care-jar-assessment.vercel.app/) 
 - [Backend Server Repository](https://github.com/soumyarajbag/CareJar-Server) with [Deployed Server on Vercel](https://care-jar-server.vercel.app/) 
-
 
 ## <h3 align='center'> UI of  CareJar Assignment </h3>
 <p align='center'>
