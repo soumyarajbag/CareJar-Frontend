@@ -20,7 +20,6 @@ const CategoryPage = (): JSX.Element => {
         setSpecialists(data.specialists);
         setBlank(false);
         setLoading(false);
-        console.log(data.specialists);
       } else {
         console.log("No Category found");
         setLoading(false);
