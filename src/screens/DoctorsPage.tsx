@@ -1,4 +1,4 @@
-import Doctor from "../components/Doctor";
+import Doctor from "../components/DoctorCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -28,7 +28,7 @@ const DoctorsPage = () => {
     try {
   
       const { data } = await axios.get(
-        `http://localhost:5000/api/doctors/${encodedRole}`
+        `https://care-jar-server.vercel.app/api/doctors/${encodedRole}`
       );
       if (data.doctorsbyrole.length > 0) {
         setDoctors(data.doctorsbyrole);
